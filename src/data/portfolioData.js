@@ -15,7 +15,8 @@ export const portfolioData = {
     email: "ueshan321@gmail.com",
     availability: "Available for Internships & Projects",
     phone: "070 335 9196",
-    resumeUrl: "/resume.pdf",
+    avatarUrl: "/profile.jpg",
+    resumeUrl: "/cv.jpg",
     stats: [
       { label: "Academic Projects", value: "2+" },
       { label: "Certifications", value: "2" },
@@ -35,12 +36,14 @@ export const portfolioData = {
       "An undergraduate pursuing a Bachelor of Management and Information Technology (BSc Hons MIT) at the University of Kelaniya, aiming to gain practical experience in management and business systems roles while developing skills in business analysis. Interests include Business Systems Engineering and Business Analysis."
     ],
     highlights: [
-      { title: "Degree", value: "BSc (Hons) in Management & Information Technology" },
-      { title: "Department", value: "Dept. of Industrial Management" },
+      { title: "Degree Program", value: "BSc (Hons) in Management & Information Technology" },
+      { title: "Academic Department", value: "Department of Industrial Management" },
       { title: "University", value: "University of Kelaniya" },
       { title: "Location", value: "Kotadeniyawa, Gampaha" },
       { title: "Phone", value: "070 335 9196" },
-      { title: "Key Interests", value: "Business Systems Engineering, Business Analysis" }
+      { title: "Email", value: "ueshan321@gmail.com" },
+      { title: "Current Status", value: "Second-Year Undergraduate (2025 – Present)" },
+      { title: "Core Focus", value: "Business Systems Engineering & Business Analysis" }
     ]
   },
 

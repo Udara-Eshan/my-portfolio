@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, MapPin, Mail, Clock, GraduationCap, Compass } from 'lucide-react';
+import { User, GraduationCap, Compass } from 'lucide-react';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 export default function About({ aboutData, personalInfo }) {
@@ -35,7 +35,7 @@ export default function About({ aboutData, personalInfo }) {
             ))}
           </div>
 
-          {/* Right Column: Quick Info Card */}
+          {/* Right Column: Quick Info Card (Zero Duplicates) */}
           <div className={`about-info-card scale-on-scroll ${isVisible ? 'is-visible' : ''}`}>
             <h3 className="about-card-title">
               <GraduationCap size={20} color="#A068FF" />
@@ -43,26 +43,6 @@ export default function About({ aboutData, personalInfo }) {
             </h3>
 
             <div className="about-info-list">
-              <div className="about-info-item">
-                <span className="info-item-label">Location</span>
-                <span className="info-item-value">{personalInfo.location}</span>
-              </div>
-
-              <div className="about-info-item">
-                <span className="info-item-label">Email</span>
-                <span className="info-item-value">{personalInfo.email}</span>
-              </div>
-
-              <div className="about-info-item">
-                <span className="info-item-label">Phone</span>
-                <span className="info-item-value">{personalInfo.phone}</span>
-              </div>
-
-              <div className="about-info-item">
-                <span className="info-item-label">Availability</span>
-                <span className="info-item-value">{personalInfo.availability}</span>
-              </div>
-
               {aboutData.highlights.map((item, idx) => (
                 <div key={idx} className="about-info-item">
                   <span className="info-item-label">{item.title}</span>

@@ -124,12 +124,13 @@ export default function Hero({ personalInfo }) {
                 </div>
               </div>
 
-              {/* Avatar Frame with Clean Portrait */}
+              {/* Avatar Frame with Uploaded Photo of Udara Eshan */}
               <div className="hero-avatar-frame" style={{ borderRadius: '24px' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" 
+                  src={personalInfo.avatarUrl || "/profile.jpg"} 
                   alt={personalInfo.name}
                   className="hero-avatar-img"
+                  style={{ objectFit: 'cover', objectPosition: 'center 15%' }}
                   loading="eager"
                 />
               </div>
