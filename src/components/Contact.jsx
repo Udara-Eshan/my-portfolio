@@ -7,7 +7,9 @@ const ICON_MAP = {
   Mail: Mail,
   Linkedin: LinkedinIcon,
   Github: GithubIcon,
-  Calendar: Calendar
+  Calendar: Calendar,
+  Phone: Phone,
+  MapPin: MapPin
 };
 
 export default function Contact({ contactData, personalInfo }) {
@@ -138,7 +140,7 @@ export default function Contact({ contactData, personalInfo }) {
                   Thank you! Message Sent.
                 </h3>
                 <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.7)', maxWidth: '380px' }}>
-                  I've received your note and will get back to you within 24 hours.
+                  I've received your note and will get back to you promptly.
                 </p>
               </div>
             ) : (

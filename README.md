@@ -1,23 +1,19 @@
 # 🌌 Personal Portfolio — Udara Eshan
 
-A single-page, responsive, high-performance personal portfolio website built with **React** and **Vite**, fulfilling all criteria of the **PPD II Profile Evaluation Rubric**.
-
-![Portfolio Preview](/public/favicon.svg)
+A single-page, responsive, high-performance personal portfolio website for **Udara Eshan**, Second-Year BSc (Hons) MIT Undergraduate at University of Kelaniya, built with **React** and **Vite**.
 
 ---
 
-## ✨ Features
+## ✨ Sections Included
 
-- **Theme & Aesthetics**: Dark violet gradient theme (`#0a0a0a` → `#060218`) with ambient radial glow (`#A068FF`), glassmorphism (`backdrop-filter: blur(12px)`), and Google Fonts (*Urbanist* and *Inter*).
-- **Sticky Glass Nav**: Active section tracking via IntersectionObserver/ScrollSpy, underline hover animation, and a responsive mobile slide-in drawer.
-- **Dynamic Hero**: Live character-by-character typewriter title, floating avatar frame with glow effect, and floating corner metric badges.
-- **About & Profile**: Comprehensive background story, career aspirations, and quick-facts card.
-- **Skills Categorization**: 6 distinct categories with interactive pill tags (Languages, Frameworks, Databases, Tools, Cloud, Soft Skills).
-- **Projects Showcase**: 3-column responsive grid with 16:9 hover-zoom thumbnails, filter tabs, live preview & GitHub links, and key contribution highlights.
-- **Timeline**: Alternating vertical timeline for Education & Experience with connected gradient line.
-- **Certifications & Awards**: Verified credentials from AWS, Google Cloud, Meta, Coursera, and hackathon awards.
-- **Resume Modal**: Interactive resume previewer with print and data download capabilities.
-- **Contact & Footer**: Direct action pill buttons, interactive message form with instant feedback, and back-to-top button.
+- **Hero & Header**: Dynamic rotating typewriter tagline (*"Enthusiastic MIT Undergraduate"* & *"Second-Year BSc (Hons) MIT Undergraduate"*), sticky glassmorphism navigation, and resume download.
+- **About Me**: Degree path at University of Kelaniya, career goals in Business Systems Engineering and Business Analysis, and quick contact highlights.
+- **Skills & Languages**: Categorized proficiencies across Programming (C++, Java), Web (HTML, CSS, JS), Databases (MySQL), Productivity Tools (MS Word, Excel, PowerPoint), Soft Skills, and Languages (English, Sinhala, Tamil).
+- **Projects**: Real-world academic and collaborative projects (*Bus Season Booking System*, *Game Development Project* in C++).
+- **Education & Experience Timeline**: University of Kelaniya (BSc Hons MIT), Bank of Ceylon (Pannala) internship, Bandaranayake College Extracurricular leadership, and school background.
+- **Certifications**: University of Moratuwa (*Web Design for Beginners*) & Britishway English Academy (*Certificated English Course*).
+- **References**: Endorsements from Dr. Amila Withanaarachchi (Senior Lecturer Grade II, University of Kelaniya) & Mr. A.J. Luxman Peiris (Former Director, Central Bank of Sri Lanka).
+- **Resume Modal & Contact**: Interactive modal viewer and direct contact channels.
 
 ---
 
@@ -25,51 +21,27 @@ A single-page, responsive, high-performance personal portfolio website built wit
 
 - **Framework**: React 18
 - **Build Tool**: Vite
-- **Styling**: Pure Vanilla CSS (CSS variables, `@property --border-angle`, keyframe animations)
+- **Styling**: Pure CSS (CSS variables, `@property --border-angle`, keyframes)
 - **Icons**: Lucide React + custom SVGs
-- **Typography**: Urbanist (600, 700) & Inter (400, 500, 600, 700) via Google Fonts
+- **Typography**: Google Fonts (*Urbanist* & *Inter*)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Running Locally
 
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
 ```bash
-# Clone the repository
-git clone https://github.com/Udara-Eshan/my-portfolio.git
-
-# Navigate into project directory
-cd my-portfolio
-
 # Install dependencies
 npm install
 
-# Run development server
+# Run dev server
 npm run dev
-```
 
-### Production Build
-```bash
+# Build production bundle
 npm run build
-npm run preview
 ```
 
 ---
 
 ## 📝 Customization
 
-All portfolio contents (Name, Bio, Skills, Projects, Experience, Certifications, Contact details) are stored centrally in:
-```
-src/data/portfolioData.js
-```
-Simply edit this file to update any information across the portfolio instantly.
-
----
-
-## 📄 License
-
-MIT License © Udara Eshan
+All portfolio content is maintained centrally in [`src/data/portfolioData.js`](file:///c:/Users/udara/OneDrive/Desktop/PPD%20Portfolio/src/data/portfolioData.js).

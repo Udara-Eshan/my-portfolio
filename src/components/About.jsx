@@ -16,7 +16,7 @@ export default function About({ aboutData, personalInfo }) {
           </div>
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">
-            Passionate about architecting robust software, mastering new paradigms, and delivering impactful digital experiences.
+            Undergraduate in Management and Information Technology at University of Kelaniya, focusing on Business Systems Engineering &amp; Analysis.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function About({ aboutData, personalInfo }) {
           <div className={`about-bio-card animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
             <h3 className="about-card-title">
               <Compass size={20} color="#A068FF" />
-              <span>Background & Aspirations</span>
+              <span>Background &amp; Aspirations</span>
             </h3>
             {aboutData.bio.map((paragraph, idx) => (
               <p key={idx} className="about-bio-text">
@@ -51,6 +51,11 @@ export default function About({ aboutData, personalInfo }) {
               <div className="about-info-item">
                 <span className="info-item-label">Email</span>
                 <span className="info-item-value">{personalInfo.email}</span>
+              </div>
+
+              <div className="about-info-item">
+                <span className="info-item-label">Phone</span>
+                <span className="info-item-value">{personalInfo.phone}</span>
               </div>
 
               <div className="about-info-item">

@@ -12,6 +12,7 @@ export default function Navbar({ activeSection, onOpenResumeModal, personalInfo 
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'certifications', label: 'Certifications' },
+    { id: 'references', label: 'References' },
     { id: 'contact', label: 'Contact' }
   ];
 
@@ -127,7 +128,7 @@ export default function Navbar({ activeSection, onOpenResumeModal, personalInfo 
             }}
           >
             <FileText size={16} />
-            <span>View & Download CV</span>
+            <span>View &amp; Download CV</span>
           </button>
         </div>
       </div>

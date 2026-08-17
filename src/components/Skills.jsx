@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Layers, Database, Wrench, Cloud, Sparkles, Cpu } from 'lucide-react';
+import { Code, Layers, Database, Wrench, Sparkles, Globe, Cpu } from 'lucide-react';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 const ICON_MAP = {
@@ -7,8 +7,8 @@ const ICON_MAP = {
   Layers: Layers,
   Database: Database,
   Wrench: Wrench,
-  Cloud: Cloud,
-  Sparkles: Sparkles
+  Sparkles: Sparkles,
+  Globe: Globe
 };
 
 export default function Skills({ skillsData }) {
@@ -21,11 +21,11 @@ export default function Skills({ skillsData }) {
         <div className={`section-header animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="section-eyebrow">
             <Cpu size={16} />
-            <span>Technical Proficiencies</span>
+            <span>Core Competencies</span>
           </div>
-          <h2 className="section-title">Skills & Capabilities</h2>
+          <h2 className="section-title">Skills &amp; Capabilities</h2>
           <p className="section-subtitle">
-            A comprehensive overview of programming languages, modern frameworks, data systems, cloud infrastructure, and soft skills.
+            Programming languages, web technologies, database management, productivity tools, soft skills, and language proficiencies.
           </p>
         </div>
 

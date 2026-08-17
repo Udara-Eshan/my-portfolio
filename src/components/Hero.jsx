@@ -36,13 +36,14 @@ export default function Hero({ personalInfo }) {
               <span>{personalInfo.eyebrow}</span>
             </div>
 
-            {/* Typewriter Heading */}
+            {/* Typewriter Heading with Cycling Taglines */}
             <TypewriterHeading 
               prefix={personalInfo.headlinePrefix}
               highlightName={personalInfo.headlineName}
-              suffix={personalInfo.headlineSuffix}
-              speed={35}
-              delay={400}
+              taglines={personalInfo.rotatingTaglines}
+              typeSpeed={40}
+              deleteSpeed={25}
+              pauseDelay={2200}
             />
 
             {/* Subheading */}
@@ -118,13 +119,13 @@ export default function Hero({ personalInfo }) {
                   <FolderGit2 size={18} />
                 </div>
                 <div>
-                  <div className="badge-val">{personalInfo.stats[0]?.value || '20+'}</div>
+                  <div className="badge-val">{personalInfo.stats[0]?.value || '2+'}</div>
                   <div className="badge-label">{personalInfo.stats[0]?.label || 'Projects'}</div>
                 </div>
               </div>
 
-              {/* Avatar Frame with High Resolution Portrait */}
-              <div className="hero-avatar-frame">
+              {/* Avatar Frame with Clean Portrait */}
+              <div className="hero-avatar-frame" style={{ borderRadius: '24px' }}>
                 <img 
                   src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" 
                   alt={personalInfo.name}
@@ -139,7 +140,7 @@ export default function Hero({ personalInfo }) {
                   <Award size={18} />
                 </div>
                 <div>
-                  <div className="badge-val">{personalInfo.stats[1]?.value || '5+'}</div>
+                  <div className="badge-val">{personalInfo.stats[1]?.value || '2'}</div>
                   <div className="badge-label">{personalInfo.stats[1]?.label || 'Certifications'}</div>
                 </div>
               </div>

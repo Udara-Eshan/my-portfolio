@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
 import Certifications from './components/Certifications';
+import References from './components/References';
 import ResumeSection from './components/ResumeSection';
 import ResumeModal from './components/ResumeModal';
 import Contact from './components/Contact';
@@ -16,7 +17,7 @@ import { useScrollSpy } from './hooks/useScrollSpy';
 export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
-  const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+  const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'certifications', 'references', 'contact'];
   const activeSection = useScrollSpy(sectionIds, 150);
 
   return (
@@ -41,12 +42,12 @@ export default function App() {
           personalInfo={portfolioData.personal}
         />
 
-        {/* Section 3: Skills (6 Categories) */}
+        {/* Section 3: Skills & Languages (6 Categories) */}
         <Skills 
           skillsData={portfolioData.skills} 
         />
 
-        {/* Section 4: Projects (3-Column Grid) */}
+        {/* Section 4: Projects */}
         <Projects 
           projectsData={portfolioData.projects} 
         />
@@ -56,18 +57,23 @@ export default function App() {
           timelineData={portfolioData.timeline} 
         />
 
-        {/* Section 6: Certifications & Achievements */}
+        {/* Section 6: Certifications & Courses */}
         <Certifications 
           certificationsData={portfolioData.certifications} 
         />
 
-        {/* Section 7: Resume / CV */}
+        {/* Section 7: References */}
+        <References 
+          referencesData={portfolioData.references}
+        />
+
+        {/* Section 8: Resume / CV */}
         <ResumeSection 
           personalInfo={portfolioData.personal}
           onOpenResumeModal={() => setIsResumeModalOpen(true)}
         />
 
-        {/* Section 8: Contact / Get In Touch */}
+        {/* Section 9: Contact / Get In Touch */}
         <Contact 
           contactData={portfolioData.contact} 
           personalInfo={portfolioData.personal}

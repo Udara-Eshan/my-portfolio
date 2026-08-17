@@ -7,13 +7,12 @@ export default function Projects({ projectsData }) {
   const [sectionRef, isVisible] = useOnScreen({ threshold: 0.1 });
   const [filter, setFilter] = useState('All');
 
-  const filterOptions = ['All', 'Featured', 'Full-Stack', 'Open Source'];
+  const filterOptions = ['All', 'Systems', 'Game Dev'];
 
   const filteredProjects = projectsData.filter((project) => {
     if (filter === 'All') return true;
-    if (filter === 'Featured') return project.featured;
-    if (filter === 'Full-Stack') return project.type.toLowerCase().includes('full-stack');
-    if (filter === 'Open Source') return project.type.toLowerCase().includes('open-source') || project.type.toLowerCase().includes('tooling');
+    if (filter === 'Systems') return project.tags.includes('Java') || project.tags.includes('MySQL');
+    if (filter === 'Game Dev') return project.tags.includes('C++') || project.title.toLowerCase().includes('game');
     return true;
   });
 
@@ -24,11 +23,11 @@ export default function Projects({ projectsData }) {
         <div className={`section-header animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="section-eyebrow">
             <FolderCode size={16} />
-            <span>Featured Work</span>
+            <span>Practical Work</span>
           </div>
-          <h2 className="section-title">Highlighted Projects</h2>
+          <h2 className="section-title">Projects</h2>
           <p className="section-subtitle">
-            A curated selection of production applications, academic capstones, hackathon innovations, and developer tools.
+            Academic software engineering and collaborative development projects demonstrating systems design and programming capabilities.
           </p>
         </div>
 
@@ -45,8 +44,8 @@ export default function Projects({ projectsData }) {
           ))}
         </div>
 
-        {/* 3-Column Projects Grid */}
-        <div className="projects-grid">
+        {/* Projects Grid */}
+        <div className="projects-grid" style={{ gridTemplateColumns: filteredProjects.length <= 2 ? 'repeat(auto-fit, minmax(320px, 1fr))' : undefined, maxWidth: '1000px', margin: '0 auto' }}>
           {filteredProjects.map((project, index) => {
             const delay = `${(index % 3) * 0.15}s`;
 
@@ -91,7 +90,7 @@ export default function Projects({ projectsData }) {
                     ))}
                   </div>
 
-                  {/* Footer Links: GitHub & Live Demo */}
+                  {/* Footer Links: GitHub & Details */}
                   <div className="project-footer-links">
                     <a 
                       href={project.github} 
@@ -101,17 +100,17 @@ export default function Projects({ projectsData }) {
                       aria-label={`${project.title} Source Code`}
                     >
                       <GithubIcon size={16} />
-                      <span>Code</span>
+                      <span>Repository</span>
                     </a>
 
                     <a 
-                      href={project.live} 
+                      href={project.github} 
                       target="_blank" 
                       rel="noreferrer"
                       className="project-link"
-                      aria-label={`${project.title} Live Demo`}
+                      aria-label={`${project.title} Project Details`}
                     >
-                      <span>Live Preview</span>
+                      <span>View Code</span>
                       <ExternalLink size={15} />
                     </a>
                   </div>
