@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Eye, FileText, Sparkles } from 'lucide-react';
+import { Download, Eye, FileText } from 'lucide-react';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 export default function ResumeSection({ onOpenResumeModal, personalInfo }) {
@@ -17,7 +17,7 @@ export default function ResumeSection({ onOpenResumeModal, personalInfo }) {
 
           <h2 className="resume-title">Want the full picture?</h2>
           <p className="resume-text">
-            Download my comprehensive resume detailing academic achievements, technical projects, industrial internship contributions, and technical proficiencies.
+            View or download my comprehensive CV detailing academic qualifications, technical skills, practical projects, banking internship, and references.
           </p>
 
           <div className="resume-actions">
@@ -29,7 +29,7 @@ export default function ResumeSection({ onOpenResumeModal, personalInfo }) {
                 aria-label="Download or View Resume"
               >
                 <Download size={18} />
-                <span>Download Resume (PDF)</span>
+                <span>View &amp; Download CV</span>
               </button>
             </div>
 
@@ -40,7 +40,7 @@ export default function ResumeSection({ onOpenResumeModal, personalInfo }) {
               aria-label="Preview Resume Online"
             >
               <Eye size={18} />
-              <span>Preview Resume</span>
+              <span>Interactive CV Preview</span>
             </button>
           </div>
         </div>

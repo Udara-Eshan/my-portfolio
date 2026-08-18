@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ShieldCheck, Trophy, ExternalLink, BookmarkCheck } from 'lucide-react';
+import { ShieldCheck, Trophy, ExternalLink, BookmarkCheck } from 'lucide-react';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 export default function Certifications({ certificationsData }) {
@@ -12,15 +12,15 @@ export default function Certifications({ certificationsData }) {
         <div className={`section-header animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="section-eyebrow">
             <Trophy size={16} />
-            <span>Honors & Accreditations</span>
+            <span>Accreditations</span>
           </div>
-          <h2 className="section-title">Certifications & Achievements</h2>
+          <h2 className="section-title">Certifications &amp; Courses</h2>
           <p className="section-subtitle">
-            Industry credentials from AWS, Google Cloud, Meta, and university awards validating professional skills and domain expertise.
+            Formal qualifications from University of Moratuwa and Britishway English Academy validating web design and English communication proficiencies.
           </p>
         </div>
 
-        <div className="certifications-grid">
+        <div className="certifications-grid" style={{ gridTemplateColumns: certificationsData.length <= 2 ? 'repeat(auto-fit, minmax(320px, 1fr))' : undefined, maxWidth: '900px', margin: '0 auto' }}>
           {certificationsData.map((cert, index) => {
             const staggerDelay = `${index * 0.1}s`;
 
@@ -32,11 +32,7 @@ export default function Certifications({ certificationsData }) {
               >
                 <div className="cert-top">
                   <div className="cert-icon-wrap">
-                    {cert.badgeType.includes('Award') || cert.badgeType.includes('Honour') ? (
-                      <Trophy size={22} />
-                    ) : (
-                      <ShieldCheck size={22} />
-                    )}
+                    <ShieldCheck size={22} />
                   </div>
                   <span className="cert-badge-type">{cert.badgeType}</span>
                 </div>
@@ -54,22 +50,10 @@ export default function Certifications({ certificationsData }) {
 
                 <div className="cert-footer">
                   <span className="cert-date">{cert.date}</span>
-                  {cert.credentialUrl && cert.credentialUrl !== '#' ? (
-                    <a 
-                      href={cert.credentialUrl} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="cert-link"
-                    >
-                      <span>Verify Credential</span>
-                      <ExternalLink size={13} />
-                    </a>
-                  ) : (
-                    <span className="cert-link" style={{ cursor: 'default', color: 'rgba(255,255,255,0.4)' }}>
-                      <BookmarkCheck size={13} />
-                      <span>Verified</span>
-                    </span>
-                  )}
+                  <span className="cert-link" style={{ cursor: 'default', color: 'rgba(255,255,255,0.45)' }}>
+                    <BookmarkCheck size={13} />
+                    <span>Verified</span>
+                  </span>
                 </div>
               </div>
             );

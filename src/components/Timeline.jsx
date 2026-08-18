@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, GraduationCap, Calendar, Milestone } from 'lucide-react';
+import { Calendar, Milestone } from 'lucide-react';
 import { useOnScreen } from '../hooks/useOnScreen';
 
 export default function Timeline({ timelineData }) {
@@ -18,11 +18,11 @@ export default function Timeline({ timelineData }) {
         <div className={`section-header animate-on-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="section-eyebrow">
             <Milestone size={16} />
-            <span>Career & Academic Pathway</span>
+            <span>Academic &amp; Professional Pathway</span>
           </div>
-          <h2 className="section-title">Education & Experience</h2>
+          <h2 className="section-title">Education &amp; Experience</h2>
           <p className="section-subtitle">
-            A chronological timeline of university studies, industrial internships, leadership positions, and community contributions.
+            University studies in Management &amp; Information Technology, banking internship, and leadership in school extracurriculars.
           </p>
         </div>
 
@@ -35,16 +35,16 @@ export default function Timeline({ timelineData }) {
             All Milestones
           </button>
           <button
-            className={`filter-btn ${activeTab === 'experience' ? 'active' : ''}`}
-            onClick={() => setActiveTab('experience')}
-          >
-            Work & Leadership
-          </button>
-          <button
             className={`filter-btn ${activeTab === 'education' ? 'active' : ''}`}
             onClick={() => setActiveTab('education')}
           >
             Education
+          </button>
+          <button
+            className={`filter-btn ${activeTab === 'experience' ? 'active' : ''}`}
+            onClick={() => setActiveTab('experience')}
+          >
+            Experience &amp; Leadership
           </button>
         </div>
 
